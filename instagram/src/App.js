@@ -1,24 +1,29 @@
 import React, { Component } from 'react';
 import './App.css';
-import dummyData from './dummy-data';
+import dummyData from './dummyData';
 import PostContainer from './components/PostContainer/PostContainer';
+import CommentSection from './components/CommentSection/CommentSection';
+import SearchBar from './components/SearchBar/SearchBar';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      userData: dummyData
+
+      // brackets?
+      userData: {dummyData}
     }
   }
  
   render() {
     return (
       <div className="App">
-        {this.state.userData.map(user => 
-            <PostContainer username={user} key={user.id} />
-          )}    
+        {/* {this.state.userData.map(user =>  */}
+            {/* <CommentSection instagram={this.state.instagram} /> */}
+            <SearchBar />
+            <PostContainer />
+            <CommentSection />
       </div>
-
     );
   }
 }

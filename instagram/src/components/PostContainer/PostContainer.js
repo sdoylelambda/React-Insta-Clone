@@ -1,6 +1,7 @@
 import React from 'react';
-import dummyData from './dummy-data';
+// import dummyData from './dummyData';
 import CommentSection from '../CommentSection/CommentSection';
+
 
 class PostContainer extends React.Component {
     constructor() {
@@ -14,10 +15,9 @@ class PostContainer extends React.Component {
 
                 <div>
                     {this.props.instagramProp.map(instagram => (
-                        <CommentSection characterFromMap={instagram} />
+                     //   <CommentSection instagramFromMap={instagram} />
+                        <CommentSection instagramFromMap={this.state.instagram} />
                     ))}
-
-
                 </div>
             </div>
         );

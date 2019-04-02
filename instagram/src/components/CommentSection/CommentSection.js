@@ -1,18 +1,17 @@
 import React from 'react';
-import PostContainer from './PostContainer/PostContainer';
+// import PostContainer from './PostContainer/PostContainer';
 
 function CommentSection(props) {
     return (
         
         <div>
-
-            {/* change characterFromMap */}
-            <strong> id:</strong> {props.characterFromMap.id}
-            <strong> username:</strong> {props.characterFromMap.username}
-            <strong> thumbnailUrl:</strong> {props.characterFromMap.thumbnailUrl}
-            <strong> likes:</strong> {props.characterFromMap.likes}
-            <strong> timestamp:</strong> {props.characterFromMap.timestamp}
-            <strong> comments:</strong> {props.characterFromMap.comments}
+            {/* <strong> id:</strong> {props.instagramFromMap.id}
+            <strong> username:</strong> {props.instagramFromMap.username}
+            <strong> thumbnailUrl:</strong> {props.instagramFromMap.thumbnailUrl}
+            <strong> likes:</strong> {props.instagramFromMap.likes}
+            <strong> timestamp:</strong> {props.instagramFromMap.timestamp}
+            <strong> comments:</strong> {props.instagramFromMap.comments} */}
+            <h4>Comments here please!</h4>
         </div>
     )
 }
@@ -21,5 +20,3 @@ function CommentSection(props) {
 export default CommentSection;
 
 
-
-//<strong> Gender:</strong> {props.characterFromMap.gender}
