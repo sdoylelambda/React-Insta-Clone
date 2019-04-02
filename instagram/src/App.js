@@ -11,18 +11,20 @@ class App extends Component {
     this.state = {
 
       // brackets?
-      userData: {dummyData}
+      userData: []
     }
+  }
+
+  componentDidMount() {
+    this.setState({userData: userData})
   }
  
   render() {
     return (
       <div className="App">
-        {/* {this.state.userData.map(user =>  */}
-            {/* <CommentSection instagram={this.state.instagram} /> */}
-            <SearchBar />
-            <PostContainer />
-            <CommentSection />
+        <SearchBar />
+        {/* {this.state.userData.map(userData => (<PostContainer instagram={this.state.instagram} />  */}
+          {this.state.userData.map(userData => (<PostContainer key={instagram.id} /> 
       </div>
     );
   }
