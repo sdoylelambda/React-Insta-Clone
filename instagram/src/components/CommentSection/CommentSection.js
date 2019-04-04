@@ -1,7 +1,7 @@
 import React from 'react';
 import './CommentSection.css'
 import PropTypes from 'prop-types';
-import CommentForm from './CommentForm';
+import CommentForm from '../CommentForm';
 import Comment from './Comment';
 
 // import PostContainer from './PostContainer/PostContainer';
@@ -41,7 +41,7 @@ CommentSection.propTypes = {
              })
         )
     }
-}
+};
 
 export default CommentSection
 

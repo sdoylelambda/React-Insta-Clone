@@ -2,7 +2,7 @@ import React from 'react';
 import '/.CommentSection';
 
 class CommentForm extends React.Component {
-    constructer() {
+    constructor() {
         super()
         this.state = {
             newComments: ""

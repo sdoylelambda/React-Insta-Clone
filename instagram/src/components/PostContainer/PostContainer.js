@@ -31,9 +31,9 @@ function PostContainer(props) {
             username: PropTypes.string.isRequired,
             thumbnailUrl: PropTypes.string.isRequired,
             imageUrl: PropTypes.string.isRequired,
-            likes: propTypes.number.isRequired,
-            timesstame: propTypes.string.isRequired,
-            comments: propTypes.arrayOf(PropTypes.object).isRequired
+            likes: PropTypes.number.isRequired,
+            timesstame: PropTypes.string.isRequired,
+            comments: PropTypes.arrayOf(PropTypes.object).isRequired
         })
     };
 

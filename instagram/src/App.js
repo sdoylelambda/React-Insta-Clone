@@ -9,9 +9,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-
-      // brackets?
-      userData: []
+      userData: dummyData
     }
   }
 
@@ -24,7 +22,9 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         {/* {this.state.userData.map(userData => (<PostContainer instagram={this.state.instagram} />  */}
-          {this.state.userData.map(userData => (<PostContainer key={instagram.id} /> 
+        {this.state.userData.map(userData => ( 
+           <PostContainer key={userData.id} /> 
+        ))}
       </div>
     );
   }
