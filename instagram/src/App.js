@@ -9,12 +9,12 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      userData: dummyData
+      userData: []
     }
   }
 
   componentDidMount() {
-    this.setState({userData: userData})
+    this.setState({userData: dummyData})
   }
  
   render() {
@@ -22,8 +22,8 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         {/* {this.state.userData.map(userData => (<PostContainer instagram={this.state.instagram} />  */}
-        {this.state.userData.map(userData => ( 
-           <PostContainer key={userData.id} /> 
+        {this.state.userData.map(post => ( 
+           <PostContainer post={post} key={post.id} /> 
         ))}
       </div>
     );

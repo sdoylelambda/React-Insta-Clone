@@ -1,5 +1,5 @@
 import React from 'react'; 
-import '/.CommentSection';
+import CommentSection from './CommentSection/CommentSection';
 
 class CommentForm extends React.Component {
     constructor() {

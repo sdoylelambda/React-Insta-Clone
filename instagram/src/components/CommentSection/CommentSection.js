@@ -2,23 +2,23 @@ import React from 'react';
 import './CommentSection.css'
 import PropTypes from 'prop-types';
 import CommentForm from '../CommentForm';
-import Comment from './Comment';
+// import Comment from '../c';
 
 // import PostContainer from './PostContainer/PostContainer';
 
 class CommentSection extends React.Component {
     constructor(props){
         super(props)
-        console.log(props.post.comments)
         this.state = {
-            comments: props.post.comments
+            comments: props.comments
         }
     }
 
 addNewComment = (event, indexNum, commentText) => {
+    console.log(this.state.comments)
     const copiedComments = this.state.comments
     const arrayWithNewComment = copiedComments.push(commentText)
-    this.setState({comments: arrayWithNewComment})
+    // this.setState({comments: arrayWithNewComment})
 }
 
 render() {
@@ -28,7 +28,8 @@ render() {
         <CommentForm postId={this.props.id} addNewComment={this.addNewComment} />
 
         </div>
-    )
+        )
+    }
 }
 
 
@@ -41,7 +42,6 @@ CommentSection.propTypes = {
              })
         )
     }
-};
 
 export default CommentSection
 
