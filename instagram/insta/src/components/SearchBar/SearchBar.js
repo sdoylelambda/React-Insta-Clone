@@ -1,8 +1,10 @@
 import React from 'react'
 import css from './SearchBar.css'
 
-const SearchBar = {
-
+function SearchBar() {
+    return (
+        <p>SearchBar</p>
+    )
 }
 
 export default SearchBar;
