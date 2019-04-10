@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 // import Comment from './Comment';
 
 function PostContainer(props) {
-    
         return (
             <div>
                 <h1>Instagram</h1>
