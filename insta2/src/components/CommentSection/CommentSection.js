@@ -29,9 +29,14 @@ class CommentSection extends React.Component {
         return (
     
             <div>
-                {this.props.comments.map(comment => ( 
-           <CommentForm comment={comment.comment} comments={comment.comments} newComment={comment.newComment} /> 
-        ))}
+                {this.props.comments.map(comment => { 
+                    return ( 
+                        <div>
+                            <p>{comment.username}</p> 
+                            <p>{comment.text}</p> 
+                    </div>
+                )})}
+        <CommentForm />
             </div>
             )
         }
