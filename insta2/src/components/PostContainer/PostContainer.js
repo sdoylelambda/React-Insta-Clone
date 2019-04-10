@@ -18,8 +18,6 @@ function PostContainer(props) {
             </div>
         );
     }
-
-  
        
     PostContainer.propTypes = {
         post: PropTypes.shape({
@@ -28,13 +26,9 @@ function PostContainer(props) {
             thumbnailUrl: PropTypes.string.isRequired,
             imageUrl: PropTypes.string.isRequired,
             likes: PropTypes.number.isRequired,
-            timesstame: PropTypes.string.isRequired,
+            timesstamp: PropTypes.string.isRequired,
             comments: PropTypes.arrayOf(PropTypes.object).isRequired
         })
     };
-
-  
-       
-
 
 export default PostContainer;

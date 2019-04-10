@@ -8,12 +8,19 @@ class CommentSection extends React.Component {
        super(props)
        console.log(props)
        this.state = {
-           comments: props.comments
+           comments: []
         }
     }
+
+     componentDidMount() {
+    this.setState({comments: this.props.commentText})
+  }
+
+
     addNewComment = (event, indexNum, commentText) => {
-        console.log(this.state)
-        const copiedComments = [...this.state.comments]
+        console.log(event, indexNum, commentText);
+        event.preventDefault();
+        const copiedComments = [...this.state.comments.commentText]
         const arrayWithNewComment = copiedComments.push(commentText)
         this.setState({comments: arrayWithNewComment})
     }
@@ -22,12 +29,13 @@ class CommentSection extends React.Component {
         return (
     
             <div>
-            <CommentForm postId={this.props.id} addNewComment={this.addNewComment} />
+                {this.props.comments.map(comment => ( 
+           <CommentForm comment={comment.comment} comments={comment.comments} newComment={comment.newComment} /> 
+        ))}
             </div>
             )
         }
     }
-    
     
     CommentSection.propTypes = {
         comments: PropTypes.arrayOf(

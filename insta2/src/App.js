@@ -25,7 +25,7 @@ class App extends Component {
            <PostContainer post={post} key={post.id} /> 
         ))}
        
-           </div>
+      </div>
     );
   }
 }
