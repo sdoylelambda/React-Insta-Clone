@@ -11,7 +11,7 @@ function Post(props) {
                 <h1>Instagram</h1>
 
                 <div>
-                    <img src={props.post.thumbnailUrl} alt='profile thumbnail' />
+                    <img src={props.post.imageUrl} alt='profile thumbnail' />
                     <h4>{props.post.username}</h4>
                         <CommentSection comments={props.post.comments}/>
                         
