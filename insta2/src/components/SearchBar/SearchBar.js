@@ -4,12 +4,17 @@ import links from '../../components/images/links.png';
 import './SearchBar.css';
  
 
-function SearchBar() {
+function SearchBar(props) {
     return (
         <div className="navBar">
-        <img src={insta} alt="instagizam" />
-        <p>SearchBar</p>
-        <img src={links} alt="links" />
+             <img className="navImage" src={insta} alt="instagizam" />
+
+
+        {/* <p>SearchBar</p> */}
+              <div>
+                 <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
+                </div>
+             <img className="navImage2" src={links} alt="links" />
         </div>
     )
 }
