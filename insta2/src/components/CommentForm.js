@@ -6,20 +6,21 @@ class CommentForm extends React.Component {
         super(props);
         this.state = {
         comments: props.comments,
-        comment: ''
+        comment: '',
+        newComment: ''
         }
     }
 
     handleChange = event => {
-        this.setState({ [event.target.name]: event.target.value })
+        this.setState({ newComment: event.target.value })
     }
 
     render() {
         return (
             <div>
-                <form onSubmit={this.props.addNewComment(this.props.postId, this.state.newComment)}>
+                <form onSubmit={(e) => this.props.addNewComment(e, this.props.postId, this.state.newComment)}>
                     <input  
-                        type='text'
+                        type='text' 
                         placeholder ='Add a comment'
                         value={this.state.newComment}
                         onChange={this.handleChange}

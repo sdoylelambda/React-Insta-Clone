@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './App.css';
+import './App.css';
 import dummyData from './components/dummyData';
 import PostContainer from './components/PostContainer/PostContainer';
 import CommentSection from './components/CommentSection/CommentSection';
@@ -9,7 +9,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      userData: []
+      userData: [],
+      loggedIn: false
     }
   }
 
@@ -20,12 +21,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        
+        
+        
         <SearchBar />
-        {this.state.userData.map(post => ( 
-           <PostContainer post={post} key={post.id} /> 
-        ))}
+        <PostContainer userData={this.state.userData} />
        
-           </div>
+      </div>
     );
   }
 }
