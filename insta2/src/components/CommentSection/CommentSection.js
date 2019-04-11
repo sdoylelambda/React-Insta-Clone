@@ -8,26 +8,42 @@ class CommentSection extends React.Component {
        super(props)
        console.log(props)
        this.state = {
-           comments: props.comments
+           comments: []
         }
     }
-    addNewComment = (event, indexNum, commentText) => {
-        console.log(this.state)
-        const copiedComments = [...this.state.comments]
-        const arrayWithNewComment = copiedComments.push(commentText)
-        this.setState({comments: arrayWithNewComment})
-    }
+
+     componentDidMount() {
+    this.setState({comments: this.props.commentText})
+  }
+
+
+    // addNewComment = (event, commentText) => {
+    //     event.preventDefault();
+    //     console.log("add comment", event, commentText);
+    //     if(this.state.comments !== undefined) {
+    //     const newComment = {username: "userTest", text: commentText}
+    //     const copiedComments = [...this.state.comments, newComment]
+    //     // const arrayWithNewComment = copiedComments.push(commentText)
+    //     this.setState({comments: copiedComments})
+    //     }
+    // }
     
     render() {
         return (
     
             <div>
-            <CommentForm postId={this.props.id} addNewComment={this.addNewComment} />
+                {this.props.comments.map(comment => { 
+                    return ( 
+                        <div>
+                            <p>{comment.username}</p> 
+                            <p>{comment.text}</p> 
+                    </div>
+                )})}
+        <CommentForm addNewComment={this.props.addNewComment} id={this.props.id} />
             </div>
             )
         }
     }
-    
     
     CommentSection.propTypes = {
         comments: PropTypes.arrayOf(
