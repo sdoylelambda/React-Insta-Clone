@@ -18,7 +18,7 @@ class CommentForm extends React.Component {
     render() {
         return (
             <div>
-                <form onSubmit={(e) => this.props.addNewComment(e, this.props.postId, this.state.newComment)}>
+                <form onSubmit={(e) => this.props.addNewComment(e,this.props.id, this.state.newComment)}>
                     <input  
                         type='text' 
                         placeholder ='Add a comment'

@@ -4,7 +4,7 @@ import links from '../../components/images/links.png';
 import './SearchBar.css';
  
 
-function SearchBar(props) {
+const SearchBar = (props) => {
     return (
         <div className="navBar">
              <img className="navImage" src={insta} alt="instagizam" />

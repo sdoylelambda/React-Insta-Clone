@@ -17,13 +17,16 @@ class CommentSection extends React.Component {
   }
 
 
-    addNewComment = (event, indexNum, commentText) => {
-        console.log(event, indexNum, commentText);
-        event.preventDefault();
-        const copiedComments = [...this.state.comments.commentText]
-        const arrayWithNewComment = copiedComments.push(commentText)
-        this.setState({comments: arrayWithNewComment})
-    }
+    // addNewComment = (event, commentText) => {
+    //     event.preventDefault();
+    //     console.log("add comment", event, commentText);
+    //     if(this.state.comments !== undefined) {
+    //     const newComment = {username: "userTest", text: commentText}
+    //     const copiedComments = [...this.state.comments, newComment]
+    //     // const arrayWithNewComment = copiedComments.push(commentText)
+    //     this.setState({comments: copiedComments})
+    //     }
+    // }
     
     render() {
         return (
@@ -36,7 +39,7 @@ class CommentSection extends React.Component {
                             <p>{comment.text}</p> 
                     </div>
                 )})}
-        <CommentForm />
+        <CommentForm addNewComment={this.props.addNewComment} id={this.props.id} />
             </div>
             )
         }
