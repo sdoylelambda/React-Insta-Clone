@@ -7,7 +7,8 @@ import PropTypes from 'prop-types';
 
 function Post(props) {
         return (
-            <div>
+            // PUT IN CSS
+            <div style={{border: "1px solid grey", width:300, margin: "10px auto"}}>
                 <h1>Instagram</h1>
 
                 <div>
